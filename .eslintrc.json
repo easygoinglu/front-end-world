@@ -20,5 +20,25 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "camelcase": ["error", {"properties": "never"}],
+        "comma-dangle": ["error", "always-multiline"],
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "keyword-spacing": ["error", {"before": true, "after": true}],
+        "max-len": ["warn", 110],
+        "new-cap": ["error", {"capIsNewExceptions": ["LocalScrollFix"]}],
+        "no-alert": ["off"],
+        "no-else-return": ["error"],
+        "no-implicit-coercion": ["off"],
+        "no-invalid-this": ["off"],
+        "no-new": 0,
+        "object-curly-spacing": ["error", "always"],
+        "one-var": ["error", { "var": "always", "let": "never", "const": "never" }],
+        "operator-linebreak": ["error", "after"],
+        "padded-blocks": ["off"],
+        "quotes": ["error", "single", {"allowTemplateLiterals": true}],
+        "quote-props": ["error", "as-needed"],
+        "space-infix-ops": "error",
+        "vue/html-indent": ["error", 4],
+        "yoda": ["error", "never"]   
     }
 }
