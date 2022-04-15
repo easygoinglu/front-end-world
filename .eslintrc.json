@@ -2,6 +2,7 @@
     "env": {
         "browser": true,
         "es2022": true,
+        "node": true,
         "vue/setup-compiler-macros": true
     },
     "extends": [
