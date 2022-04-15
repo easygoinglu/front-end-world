@@ -1,9 +1,16 @@
 {
-    "extends": "stylelint-config-recommended-vue",
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recommended-vue"
+    ],
     "plugins": [
 		"stylelint-order"
 	],
     "rules": {
+        "color-hex-length": "short",
+        "indentation": 4,
+        "number-leading-zero": "never",
+        "selector-attribute-quotes": "always",
         "order/properties-order": [
             "content",
             "position",
