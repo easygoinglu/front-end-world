@@ -9,4 +9,5 @@ export default {
     layer_layout_top: 6, // modal & menu
 
     color_white: '#fff',
+    color_black_light: 'rgb(0, 0, 0, .7)',
 };
