@@ -27,6 +27,7 @@
                 </AppLink>
             </li>    
         </ul>
+        <AppMask v-show="!isHideMenu" />
     </section>
 </template>
 
@@ -34,6 +35,7 @@
 import { ref } from 'vue';
 import { MAIN_MENU } from '@/common/constants';
 import vClickOutside from '@/common/directives/click-outside';
+import AppMask from '@/components/AppMask.vue';
 
 const isHideMenu = ref(1);
 
