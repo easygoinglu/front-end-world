@@ -7,4 +7,6 @@ export default {
     layer_layout_bottom: 4, // header
     layer_layout_middle: 5, // mask
     layer_layout_top: 6, // modal & menu
+
+    color_white: '#fff',
 };
