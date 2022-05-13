@@ -3,6 +3,7 @@ import App from '@/App.vue';
 import AppLink from '@/components/AppLink.vue'
 import router from '@/router';
 import 'normalize.css';
+import '@/css/base.css';
 
 createApp(App)
     .component('AppLink', AppLink)

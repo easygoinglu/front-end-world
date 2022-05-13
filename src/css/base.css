@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+p,
+h2 {
+    margin: 0;
+}
