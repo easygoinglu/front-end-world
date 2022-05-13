@@ -5,6 +5,7 @@
             @click.stop="showMenu"
         />
         <ul           
+            v-click-outside="hideMenu"
             class="menu-list"
             :style="`--menu-active: ${isHideMenu}`"
             @click.stop="hideMenu"
@@ -32,6 +33,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MAIN_MENU } from '@/common/constants';
+import vClickOutside from '@/common/directives/click-outside';
 
 const isHideMenu = ref(1);
 
