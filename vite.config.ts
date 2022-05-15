@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import postcssNested from 'postcss-nested';
+import postcssFor from 'postcss-for';
 import postcssVars from 'postcss-simple-vars';
 import cssVariables from './src/common/configs/css-variables';
 
@@ -17,6 +18,7 @@ export default defineConfig({
         postcss: {
             plugins: [
                 postcssNested,
+                postcssFor,
                 postcssVars({ 
                     variables: (cssVariables), 
                 }),
