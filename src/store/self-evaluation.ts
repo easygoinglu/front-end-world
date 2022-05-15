@@ -18,6 +18,10 @@ type EvaluationData = {
 
 export const selfEvaluationStore = defineStore('selfEvaluation', {
     state: () => {
+        if (localStorage.getItem('selfEvaluationState')) {
+            return JSON.parse(localStorage.getItem('selfEvaluationState') || '');
+        } 
+
         return {
             evaluationList: [
                 {
