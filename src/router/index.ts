@@ -7,6 +7,11 @@ const routes = [
         path: '/', 
         component: FrontEndOverview, 
     },
+    { 
+        name: 'self-evaluation', 
+        path: '/self-evaluation', 
+        component: () => import('@/views/SelfEvaluation.vue'), 
+    },
 ];
 
 const router = createRouter({
