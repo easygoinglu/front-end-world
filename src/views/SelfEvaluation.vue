@@ -74,7 +74,7 @@ const evaluationList = computed(() => store.evaluationList);
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
-    background-color: $color_gray_light;
+    background-color: $color_gray_light_primary;
     border-radius: .5rem;
 }
 
