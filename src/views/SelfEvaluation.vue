@@ -53,7 +53,7 @@ const evaluationList = computed(() => store.evaluationList);
 
     --color-1: $color_blue_light;
     --color-2: $color_yellow_light;
-    --color-3: $color_red_light;
+    --color-3: $color_red_light_secondary;
     --color-4: $color_green_light;
     --color-5: $color_purple_light;
 

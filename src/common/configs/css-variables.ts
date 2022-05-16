@@ -12,7 +12,7 @@ export default {
     color_black_light: 'rgb(0, 0, 0, .7)',
     color_blue_light: '#78ffff',
     color_yellow_light: '#ffff78',
-    color_red_light: '#ff9696',
+    color_red_light_secondary: '#ff9696',
     color_red: '#f50000',
     color_green_light: ' #78ff78',
     color_purple_light: '#c2c2ff',
