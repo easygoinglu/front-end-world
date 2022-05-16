@@ -17,4 +17,5 @@ export default {
     color_green_light: ' #78ff78',
     color_purple_light: '#c2c2ff',
     color_gray_light: '#f5f5f5',
+    color_pink: '#ff6384',
 };

@@ -29,12 +29,15 @@
                 </div>
             </div>
         </div>
+        <SelfEvaluationChartRadar />
     </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
 import { selfEvaluationStore } from '@/store/self-evaluation';
+import SelfEvaluationChartRadar from '@/components/SelfEvaluationChartRadar.vue';
+
 
 const store = selfEvaluationStore();
 const evaluationList = computed(() => store.evaluationList);
