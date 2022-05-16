@@ -13,9 +13,11 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "chart.js": "^3.7.1",
         "normalize.css": "^8.0.1",
         "pinia": "^2.0.14",
         "vue": "^3.2.25",
+        "vue-chartjs": "^4.1.0",
         "vue-router": "^4.0.14"
     },
     "devDependencies": {
