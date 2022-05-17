@@ -33,9 +33,19 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { MAIN_MENU } from '@/common/constants';
 import vClickOutside from '@/common/directives/click-outside';
 import AppMask from '@/components/AppMask.vue';
+
+const MAIN_MENU = [
+    {
+        id: 'front-end-overview',
+        name: 'Overview',
+    },
+    {
+        id: 'self-evaluation',
+        name: 'Self-Evaluation',
+    },
+];
 
 const isHideMenu = ref(1);
 
