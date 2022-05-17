@@ -13,7 +13,7 @@ export default {
     color_black: '#000',
     color_blue_light: '#78ffff',
     color_yellow_light: '#ffff78',
-    color_red_light_primary: '#ffdede',
+    color_red_light_primary: '#ffe8e8',
     color_red_light_secondary: '#ff9696',
     color_red: '#f50000',
     color_green_light: ' #78ff78',

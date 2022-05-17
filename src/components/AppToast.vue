@@ -43,6 +43,7 @@ onUpdated(() => {
     left: 50%;
     z-index: $layer_layout_top;
     width: 28rem;
+    border: .3rem solid $color_red_light_secondary;
     padding: 1rem;
     color: $color_black;
     background-position: 1.5rem center;
