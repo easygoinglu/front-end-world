@@ -31,8 +31,8 @@
                     >
                         {{ categoryItem.category }}
                     </h2>
-                    <div class="info">
-                        <div
+                    <ul class="info">
+                        <li
                             v-for="typeItem in categoryItem.info"
                             :key="typeItem.type"
                             :class="['type', ...settingClass.type]"
@@ -48,8 +48,8 @@
                             <div class="type-score">
                                 {{ typeItem.score }}
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
