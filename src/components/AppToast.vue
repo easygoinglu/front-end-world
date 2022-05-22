@@ -56,7 +56,7 @@ onUpdated(() => {
 
     &.error {
         background-color: $color_red_light_primary;
-        background-image: url("icons/error.svg");
+        background-image: url("@/assets/icons/error.svg");
     }
 
     &.is-active {

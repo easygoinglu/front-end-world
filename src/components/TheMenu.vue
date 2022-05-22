@@ -84,12 +84,12 @@ const hideMenu = () => {
         position: absolute;
         top: calc((4.5rem - 3rem) / 2);
         right: 1rem;
-        background-image: url("icons/menu.svg");
+        background-image: url("@/assets/icons/menu.svg");
     }
 
     .menu-close-icon {
         margin: 1rem;
-        background-image: url("icons/close_circle.svg");
+        background-image: url("@/assets/icons/close_circle.svg");
     }
 }
 

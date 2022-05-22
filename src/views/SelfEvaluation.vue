@@ -210,15 +210,15 @@ const deleteType = () => {
     }
 
     &.add-icon {
-        background-image: url("icons/add_circle.svg");
+        background-image: url("@/assets/icons/add_circle.svg");
     }
 
     &.edit-icon {
-        background-image: url("icons/edit.svg");
+        background-image: url("@/assets/icons/edit.svg");
     }
 
     &.delete-icon {
-        background-image: url("icons/delete.svg");
+        background-image: url("@/assets/icons/delete.svg");
     }
 }
 
@@ -262,7 +262,7 @@ const deleteType = () => {
         }
 
         &.delete-type-settings::after {
-            background-image: url("icons/delete.svg");
+            background-image: url("@/assets/icons/delete.svg");
         }
     }
 }
@@ -322,11 +322,11 @@ const deleteType = () => {
         }
 
         &.edit-type-settings::after {
-            background-image: url("icons/edit.svg");
+            background-image: url("@/assets/icons/edit.svg");
         }
 
         &.delete-type-settings::after {
-            background-image: url("icons/delete.svg");
+            background-image: url("@/assets/icons/delete.svg");
         }
     }
 }

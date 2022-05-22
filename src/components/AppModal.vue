@@ -60,7 +60,7 @@ const close = () => {
         display: inline-block;
         width: 3rem;
         height: 3rem;
-        background-image: url("icons/close.svg");
+        background-image: url("@/assets/icons/close.svg");
         background-size: cover;
         background-repeat: no-repeat;
         transform: translateY(-50%);
