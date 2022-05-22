@@ -49,6 +49,14 @@ export const selfEvaluationStore = defineStore('selfEvaluation', {
                             score: 0,
                         },  
                         {
+                            type: 'styled-components',
+                            score: 0,
+                        }, 
+                        {
+                            type: 'Emotion',
+                            score: 0,
+                        }, 
+                        {
                             type: 'BEM',
                             score: 0,
                         },  
@@ -92,7 +100,20 @@ export const selfEvaluationStore = defineStore('selfEvaluation', {
                     ],
                 }, 
                 {
-                    category: 'Build Tools',
+                    category: 'Package Manager',
+                    info: [
+                        {
+                            type: 'Node Package Manager',
+                            score: 0,
+                        }, 
+                        {
+                            type: 'Yarn',
+                            score: 0,
+                        }, 
+                    ],
+                },                
+                {
+                    category: 'Build Tool',
                     info: [
                         {
                             type: 'Webpack',
@@ -109,7 +130,7 @@ export const selfEvaluationStore = defineStore('selfEvaluation', {
                     ],
                 },
                 {
-                    category: 'Testing Tools',
+                    category: 'Testing Tool',
                     info: [
                         {
                             type: 'Jest',
