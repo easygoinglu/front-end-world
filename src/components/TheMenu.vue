@@ -21,7 +21,7 @@
             >
                 <AppLink 
                     class="menu-link" 
-                    :to="{name: menu.id}"
+                    :to="menu.id"
                 >
                     {{ menu.name }}
                 </AppLink>
