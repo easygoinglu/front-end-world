@@ -12,8 +12,13 @@
                 alt="front-end world"
             >
         </section>
+        <WebHistory />
     </div>
 </template>
+
+<script setup lang="ts">
+import WebHistory from '@/components/WebHistory.vue';
+</script>
 
 <style scoped lang="postcss">
 .introduction {
