@@ -1,5 +1,5 @@
 <template>
-    <section class="menu">
+    <nav class="menu">
         <i
             class="menu-icon menu-burger-icon"
             @click.stop="showMenu"
@@ -28,7 +28,7 @@
             </li>    
         </ul>
         <AppMask v-show="!isHideMenu" />
-    </section>
+    </nav>
 </template>
 
 <script setup lang="ts">
