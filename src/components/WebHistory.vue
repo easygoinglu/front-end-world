@@ -400,45 +400,54 @@ const clickType = (e: Event) => {
         padding: 1rem;
         font-weight: 600;
         color: $color_white;
-        background-position: center;
-        background-size: cover;
         background-repeat: no-repeat;
         cursor: pointer;
 
         &.overview {
-            grid-column: 1/-1;
             background-image: url("@/assets/images/solar_system.jpg");
+            background-position: center;
+            background-size: cover;
+            grid-column: 1/-1;
 
             @media (min-width: $breakpoint_medium) {
                 grid-column: span 2;
             }
         }
 
+        &:not(.overview) {
+            background-image: url("@/assets/images/planet_sprites.jpg");
+            background-size: auto 500%;
+        }
+
         &.browser {
-            background-image: url("@/assets/images/mercury.jpg");
+            background-position: 40.9% 75%;   /* 40.9% = 50% - ((662-602)/662) * 100% */
         }
 
         &.html {
-            background-image: url("@/assets/images/venus.jpg");
+            background-position: 40.9% 100%;
         }
 
         &.css {
-            background-image: url("@/assets/images/earth.jpg");
+            background-position: 40.9% 25%;
         }
 
         &.javascript {
-            background-image: url("@/assets/images/mars.jpg");
+            background-position: 40.9% 50%;
         }
 
         &.other {
-            background-image: url("@/assets/images/jupiter.jpg");
+            background-position: 50% 0;
 
             @media not all and (min-width: $breakpoint_medium) {
                 &:nth-child(3n) {
+                    background-position: 50% 2%;
+                    background-size: auto 600%;
                     grid-column: span 2;
                 }
 
                 &:nth-child(3n-1) {
+                    background-position: 50% 5%;
+                    background-size: auto 900%;
                     grid-column: span 3;
                 }
             }
