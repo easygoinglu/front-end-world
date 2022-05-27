@@ -5,11 +5,12 @@
                 Let's explore the front-end world!
             </p>
             <img
-                class="front-end-world"
+                :class="['front-end-world', loadingClass]"
                 src="@/assets/images/universe.jpg"
                 height="300"
                 width="450"
                 alt="front-end world"
+                @load="loadImage"
             >
         </section>
         <WebHistory />
@@ -17,9 +18,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import WebHistory from '@/components/WebHistory.vue';
+
+const loadingClass = ref('loading-placehoder');
+
+const loadImage = () => {
+    loadingClass.value = '';
+};
 </script>
 
+<style scoped lang="postcss" src="@/css/style-utils.css"></style>
 <style scoped lang="postcss">
 .introduction {
     text-align: center;
