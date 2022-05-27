@@ -13,7 +13,15 @@
                 :class="['web-type', key.toLowerCase()]"
                 :data-web-type="key"
             >
-                {{ value }}
+                <p class="web-type-name">
+                    {{ value }}
+                </p>
+                <img
+                    class="web-type-image"
+                    :src="key === 'Overview' ? overviewImage : webTypeImageSprites"
+                    :height="key === 'Overview' ? 150 : 750"
+                    :alt="key"
+                >
             </li>
         </ul>   
         <AppTimeline
@@ -27,6 +35,8 @@
 import { ref, reactive, computed } from 'vue';
 import AppTimeline from '@/components/AppTimeline.vue';
 import { WebTypes, webHistoryEntries } from '@/data/web-history';
+import overviewImage from '@/assets/images/solar_system.jpg';
+import webTypeImageSprites from '@/assets/images/planet_sprites.jpg';
 
 const webHistoryData = reactive(webHistoryEntries);
 
@@ -57,7 +67,12 @@ const clickType = (e: Event) => {
         return;
     }
 
-    currentWebType.value = WebTypes[e.target.dataset.webType as keyof typeof WebTypes];
+    let webType = e.target.dataset.webType;
+    if (!e.target.dataset.webType && e.target.parentNode instanceof HTMLElement) {
+        webType = e.target.parentNode.dataset.webType;
+    }
+
+    currentWebType.value = WebTypes[webType as keyof typeof WebTypes];
 };
 </script>
 
@@ -85,17 +100,29 @@ const clickType = (e: Event) => {
     }
 
     .web-type {
+        position: relative;
+        overflow: hidden;
         height: 15rem;
-        padding: 1rem;
         font-weight: 600;
         color: $color_white;
         background-repeat: no-repeat;
+        border-radius: .5rem;
         cursor: pointer;
 
+        .web-type-name {
+            position: absolute;
+            z-index: $layer_content_top;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .web-type-image {
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+        }
+
         &.overview {
-            background-image: url("@/assets/images/solar_system.jpg");
-            background-position: center;
-            background-size: cover;
             grid-column: 1/-1;
 
             @media (min-width: $breakpoint_medium) {
@@ -103,41 +130,54 @@ const clickType = (e: Event) => {
             }
         }
 
-        &:not(.overview) {
-            background-image: url("@/assets/images/planet_sprites.jpg");
-            background-size: auto 500%;
+        &:not(.overview, .other) {
+            .web-type-image {
+                width: 110%;  /* 110% = 662 / 602 * 100% */
+            }
         }
 
         &.browser {
-            background-position: 40.9% 75%;   /* 40.9% = 50% - ((662-602)/662) * 100% */
+            .web-type-image {
+                top: -300%;
+            }
         }
 
         &.html {
-            background-position: 40.9% 100%;
+            .web-type-image {
+                top: -400%;
+            }
         }
 
         &.css {
-            background-position: 40.9% 25%;
+            .web-type-image {
+                top: -100%;
+            }
         }
 
         &.javascript {
-            background-position: 40.9% 50%;
+            .web-type-image {
+                top: -200%;
+            }
         }
 
         &.other {
-            background-position: 50% 0;
-
             @media not all and (min-width: $breakpoint_medium) {
                 &:nth-child(3n) {
-                    background-position: 50% 2%;
-                    background-size: auto 600%;
                     grid-column: span 2;
+
+                    .web-type-image {
+                        top: -20%;
+                        height: 700%;
+                    }
                 }
 
                 &:nth-child(3n-1) {
-                    background-position: 50% 5%;
-                    background-size: auto 900%;
                     grid-column: span 3;
+
+                    .web-type-image {
+                        top: -40%;
+                        height: 900%;
+                    }
                 }
             }
         }
