@@ -8,7 +8,7 @@
             @click="clickType"
         >
             <li
-                v-for="(value, key) in WebTypes"
+                v-for="(value, key, index) in WebTypes"
                 :key="key"
                 :class="['web-type', key.toLowerCase()]"
                 :data-web-type="key"
@@ -17,10 +17,11 @@
                     {{ value }}
                 </p>
                 <img
-                    class="web-type-image"
+                    :class="['web-type-image', loadingClass[index]]"
                     :src="key === 'Overview' ? overviewImage : webTypeImageSprites"
                     :height="key === 'Overview' ? 150 : 750"
                     :alt="key"
+                    @load="loadImage(index)"
                 >
             </li>
         </ul>   
@@ -74,8 +75,15 @@ const clickType = (e: Event) => {
 
     currentWebType.value = WebTypes[webType as keyof typeof WebTypes];
 };
+
+const loadingClass = reactive<string[]>(Array(5).fill('loading-placehoder'));
+
+const loadImage = (webType: number) => {
+    loadingClass[webType] = '';
+};
 </script>
 
+<style scoped lang="postcss" src="@/css/style-utils.css"></style>
 <style scoped lang="postcss">
 .web-history {
     @media not all and (min-width: $breakpoint_medium) {
