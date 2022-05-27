@@ -5,7 +5,7 @@
                 Let's explore the front-end world!
             </p>
             <img
-                class="universe"
+                class="front-end-world"
                 src="@/assets/images/universe.jpg"
                 height="300"
                 width="450"
@@ -36,7 +36,7 @@ import WebHistory from '@/components/WebHistory.vue';
         }
     }
 
-    .universe {
+    .front-end-world {
         max-width: 90%;
         height: auto;
     }
