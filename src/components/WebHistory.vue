@@ -8,12 +8,12 @@
             @click="clickType"
         >
             <li
-                v-for="webType in WebTypes"
-                :key="webType"
-                :class="['web-type', webType.toLowerCase()]"
-                :data-web-type="webType"
+                v-for="(value, key) in WebTypes"
+                :key="key"
+                :class="['web-type', key.toLowerCase()]"
+                :data-web-type="key"
             >
-                {{ webType }}
+                {{ value }}
             </li>
         </ul>   
         <AppTimeline
