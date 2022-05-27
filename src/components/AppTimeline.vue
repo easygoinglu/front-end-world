@@ -35,7 +35,6 @@ defineProps<{
     margin: 1rem auto;
     padding: 2rem 2rem 0;
     background-color: $color_black;
-    border-radius: .5rem;
 }
 
 .title {
