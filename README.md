@@ -32,7 +32,7 @@ A collection of front-end history and technologies
 * Vue.js, Vue Router, Pinia, ES6+
 * vue-chartjs
 * Postcss
-* Typescript
+* TypeScript
 * ESlint, Stylelint
 * vite-plugin-imagemin
 * husky
